@@ -10,14 +10,80 @@
 </head>
 <body>
 
-    <div id="app">
+    <div id="app" class="flex">
         <!-- Main content -->
-        <main id="main-window">
+        <main id="main-window" class="flex">
             <!-- Sidebar -->
-            <aside id="sidebar">
-                <div class="sidebar-top">Logo e Nav</div>
+            <aside id="sidebar" class="flex">
+                <div class="sidebar-top">
+                  <img class="big-logo" src="img/logo.svg" alt="logo">
 
-                <div class="sidebar-bottom">Account</div>
+                  <nav class="main-nav">
+                    <button class="active" type="button" name="button">
+                      <img src="img/home.svg" alt="">
+                      <span>Home</span>
+                    </button>
+
+
+                    <button type="button" name="button">
+                      <img src="img/search.svg" alt="">
+                      <span>Cerca</span>
+                    </button>
+
+                    <button type="button" name="button">
+                      <img src="img/libreria.svg" alt="">
+                      <span>La tua libreria</span>
+                    </button>
+                  </nav>
+
+                  <nav class="playlist-menu">
+                    <button class="flex" type="button" name="button">
+                      <i class="fas fa-plus-square"></i>
+                      <span>Crea Playlist</span>
+                    </button>
+
+                    <ul class="playlist-list">
+                      <li>
+                        <button type="button" name="button">Nome playlist</button>
+                      </li>
+                      <li>
+                        <button type="button" name="button">Nome playlist</button>
+                      </li>
+                      <li>
+                        <button type="button" name="button">Nome playlist</button>
+                      </li>
+                      <li>
+                        <button type="button" name="button">Nome playlist</button>
+                      </li>
+                      <li>
+                        <button type="button" name="button">Nome playlist</button>
+                      </li>
+                      <li>
+                        <button type="button" name="button">Nome playlist</button>
+                      </li>
+                      <li>
+                        <button type="button" name="button">Nome playlist</button>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+
+
+
+
+                <div class="sidebar-bottom">
+                  <button class="flex install-button" type="button" name="button">
+                    <i class="far fa-arrow-alt-circle-down"></i>
+                    <span>Installa app</span>
+                  </button>
+
+                  <button class="flex account-button" type="button" name="button">
+                    <div class="circle">
+                      <img src="img/profile.svg" alt="">
+                    </div>
+                    <span class="text-white">John Doe</span>
+                  </div>
+                  </button>
             </aside>
 
             <!-- Content -->
