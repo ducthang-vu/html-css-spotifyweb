@@ -11,65 +11,61 @@
 <body>
 
     <div id="app" class="flex">
-        <!-- Main content -->
+        <!-- MAIN CONTENT -->
         <main id="main-window" class="flex">
-            <!-- Sidebar -->
+            <!-- SIDEBAR -->
             <aside id="sidebar" class="flex">
                 <div class="sidebar-top">
                   <img class="big-logo" src="img/logo.svg" alt="logo">
 
                   <nav class="main-nav">
-                    <button class="active" type="button" name="button">
+                    <button class="active flex relative hover-white" type="button" name="button">
                       <img src="img/home.svg" alt="">
                       <span>Home</span>
                     </button>
 
-
-                    <button type="button" name="button">
+                    <button class="flex relative hover-white" type="button" name="button">
                       <img src="img/search.svg" alt="">
                       <span>Cerca</span>
                     </button>
 
-                    <button type="button" name="button">
+                    <button class="flex relative hover-white" type="button" name="button">
                       <img src="img/libreria.svg" alt="">
                       <span>La tua libreria</span>
                     </button>
                   </nav>
 
                   <nav class="playlist-menu">
-                    <button class="flex" type="button" name="button">
+                    <button class="flex hover-white" type="button" name="button">
                       <i class="fas fa-plus-square"></i>
                       <span>Crea Playlist</span>
                     </button>
 
                     <ul class="playlist-list">
                       <li>
-                        <button type="button" name="button">Nome playlist</button>
+                        <button class="hover-white" type="button" name="button">Nome playlist</button>
                       </li>
                       <li>
-                        <button type="button" name="button">Nome playlist</button>
+                        <button class="hover-white" type="button" name="button">Nome playlist</button>
                       </li>
                       <li>
-                        <button type="button" name="button">Nome playlist</button>
+                        <button class="hover-white" type="button" name="button">Nome playlist</button>
                       </li>
                       <li>
-                        <button type="button" name="button">Nome playlist</button>
+                        <button class="hover-white" type="button" name="button">Nome playlist</button>
                       </li>
                       <li>
-                        <button type="button" name="button">Nome playlist</button>
+                        <button class="hover-white" type="button" name="button">Nome playlist</button>
                       </li>
                       <li>
-                        <button type="button" name="button">Nome playlist</button>
+                        <button class="hover-white" type="button" name="button">Nome playlist</button>
                       </li>
                       <li>
-                        <button type="button" name="button">Nome playlist</button>
+                        <button class="hover-white" type="button" name="button">Nome playlist</button>
                       </li>
                     </ul>
                   </nav>
                 </div>
-
-
-
 
                 <div class="sidebar-bottom">
                   <button class="flex install-button" type="button" name="button">
@@ -86,38 +82,44 @@
                   </button>
             </aside>
 
-            <!-- Content -->
-            <div id="content">
-                <div class="content-top-bar">Top bare here</div>
-                <div class="scrollable">
-                    <nav class="content-menu">Menu</nav>
+            <!-- CONTENT -->
+            <div id="content" class="relative">
+                <div class="content-top-bar">
+                  <button class="button text-white" type="button" name="button">
+                    <span>EFFETTUA L'UPGRADE</span>
+                  </button>
+                </div>
 
-                    <section class="content-category">
-                        <h2>Category title</h2>
-                    </section>
-                    <section class="content-category">
-                        <h2>Category title</h2>
-                    </section>
-                    <section class="content-category">
-                        <h2>Category title</h2>
-                    </section>
-                    <section class="content-category">
-                        <h2>Category title</h2>
-                    </section>
-                    <section class="content-category">
-                        <h2>Category title</h2>
-                    </section>
-                    <section class="content-category">
-                        <h2>Category title</h2>
-                    </section>
-                    <section class="content-category">
-                        <h2>Category title</h2>
-                    </section>
+
+                <div class="scrollable">
+                  <nav class="content-menu">Menu</nav>
+
+                  <section class="content-category">
+                      <h2>Category title</h2>
+                  </section>
+                  <section class="content-category">
+                      <h2>Category title</h2>
+                  </section>
+                  <section class="content-category">
+                      <h2>Category title</h2>
+                  </section>
+                  <section class="content-category">
+                      <h2>Category title</h2>
+                  </section>
+                  <section class="content-category">
+                      <h2>Category title</h2>
+                  </section>
+                  <section class="content-category">
+                      <h2>Category title</h2>
+                  </section>
+                  <section class="content-category">
+                      <h2>Category title</h2>
+                  </section>
                 </div>
             </div>
         </main>
 
-        <!-- Bottom Player -->
+        <!-- BOTTOM PLAYER -->
         <footer id="player" class="flex">
           <section class="left-player flex">
             <img src="img/sinister.jpeg" alt="sinister">
@@ -137,15 +139,49 @@
           </section>
 
           <section class="central-player">
-            <i class="fas fa-random"></i>
-            <i class="fas fa-step-backward"></i>
-            <i class="fas fa-redo-alt"></i>
+            <div class="central-top-player text-center text-white">
+              <button class="button hover-gray" type="button" name="button">
+                <i class="fas fa-random"></i>
+              </button>
+
+              <button class="button hover-gray" type="button" name="button">
+                <i class="fas fa-step-backward"></i>
+              </button>
+
+              <button class="button hover-gray" type="button" name="button">
+                <i class="far fa-play-circle"></i>
+              </button>
+
+              <button class="button hover-gray" type="button" name="button">
+                <i class="fas fa-step-forward"></i>
+              </button>
+
+              <button class="button hover-gray" type="button" name="button">
+                <i class="fas fa-redo-alt"></i>
+              </button>
+
+            </div>
+
+            <div class="central-top-player text-center">
+              <span class="text-white text-size-10">0:25</span>
+              <div class="status-bar inline-block"></div>
+              <span class="text-white text-size-10">4:35</span>
+            </div>
           </section>
 
           <section class="right-player flex">
-            <i class="fas fa-list-ul text-white"></i>
-            <i class="fas fa-tv text-white"></i>
-            <i class="fas fa-volume-up text-white"></i>
+            <button class="button hover-gray" type="button" name="button">
+              <i class="fas fa-list-ul text-white"></i>
+            </button>
+
+            <button class="button hover-gray" type="button" name="button">
+              <i class="fas fa-tv text-white"></i>
+            </button>
+
+            <button class="button hover-gray" type="button" name="button">
+              <i class="fas fa-volume-up text-white"></i>
+            </button>
+
             <div class="status-bar"></div>
           </section>
         </footer>
