@@ -96,6 +96,10 @@ li {
 
 
 /* playlist-menu */
+.playlist-menu {
+  margin-top: 20px;
+}
+
 .playlist-menu button {
   align-items: center;
 }
@@ -186,6 +190,55 @@ li {
 
 /* BOTTOM PLAYER */
 #player {
-  height: 80px; /*debug*/
+  justify-content: space-between;
+  padding: 15px;
   background: #333;
+}
+
+#player > * {
+  flex-basis: calc(100% / 3);
+}
+
+.left-player {
+  align-items: center;
+}
+
+.left-player * {
+  margin-right: 10px;
+}
+
+.left-player img {
+  width: 45px;
+  height: 45px;
+}
+
+.left-player .item-title .text-white {
+  font-weight: 700;
+}
+
+.right-player {
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.right-player > * {
+  margin-left: 10px;
+}
+
+.right-player .status-bar {
+  position: relative;
+  width: 60px;
+  border: 3px solid;
+  border-radius: 3px;
+}
+
+.right-player .status-bar::after {
+  position: absolute;
+  content: '';
+  left: 0;
+  top: 0;
+  transform: translate(-50%, -50%);
+  width: 45%;
+  border: 3px solid #fff;
+  border-radius: 3px;
 }
