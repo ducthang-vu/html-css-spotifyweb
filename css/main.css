@@ -213,6 +213,10 @@ li {
   border-radius: 15px;
 }
 
+.content-top-bar .box-button .button span {
+  vertical-align: -1px
+  }
+
 .content-top-bar .box-button .button:hover {
   padding: 10px 22px;
   font-size: 104%;
@@ -341,6 +345,7 @@ li {
 }
 
 
+
 /* RESPONSIVE */
 @media screen and (min-width: 601px) {
   /* UTILITIES */
@@ -405,6 +410,7 @@ li {
    flex-basis: calc(100% / 4);
  }
 }
+
 
 @media screen and (min-width: 1024px) {
   .song-box {
