@@ -8,7 +8,7 @@
 body {
   color: gray;
   font-family: 'Montserrat', sans-serif;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 button,
@@ -35,6 +35,10 @@ li {
 }
 
 /* UTILITIES */
+.no-display-small {
+ display: none;
+}
+
 .flex {
   display: flex;
 }
@@ -100,10 +104,10 @@ li {
 
 /* SIDEBAR */
 #sidebar {
-  flex-basis: 180px; /* larghezza sidebar */
+  flex-basis: 60px; /* width sidebar, see responsive */
   flex-direction: column;
   justify-content: space-between;
-  padding: 15px 15px 0 15px;
+  padding: 5px 10px 0 10px;
   background: #000;
 }
 
@@ -112,27 +116,16 @@ li {
   flex-grow: 1;
 }
 
-.main-nav button {
+/* /* WARNING:  */ */
+.main-nav .button {
   align-items: center;
   padding: 10px 0;
   width: 100%;
-  text-align: left;
 }
 
-.main-nav button img {
-  padding-right: 10px;
-  width: 20%;
+.main-nav .button img {
+  width: 100%;
   object-fit: contain;
-}
-
-.main-nav button.active::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -15px;
-  width: 4px;
-  height: 100%;
-  background: green;
 }
 
 
@@ -156,6 +149,7 @@ li {
 
 /* Sidebar-bottom */
 .sidebar-bottom button {
+  justify-content: center;
   align-items: center;
   width: 100%;
   padding: 10px 0;
@@ -165,12 +159,12 @@ li {
   color: #fff;
 }
 
-.sidebar-bottom button i {
-  margin-right: 10px;
-}
-
 .sidebar-bottom .install-button {
   border-bottom: 1px solid #fff;
+}
+
+.sidebar-bottom .account-button:hover .circle {
+  background: green;
 }
 
 .sidebar-bottom .account-button:hover span {
@@ -178,7 +172,6 @@ li {
 }
 
 .sidebar-bottom .account-button .circle {
-  margin-right: 10px;
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -206,7 +199,7 @@ li {
 .content-top-bar > .box-button {
   position: absolute;
   width: 210px;
-  height:38px;
+  height: 38px;
   top: 10px;
   right: 25px;
   justify-content: center;
@@ -215,13 +208,14 @@ li {
 
 .content-top-bar .box-button .button {
   padding: 8px 20px;
+  background: rgb(45, 45, 45);
   border: 1px solid #fff;
-  border-radius: 10px;
+  border-radius: 15px;
 }
 
 .content-top-bar .box-button .button:hover {
   padding: 10px 22px;
-  font-size: 102%;
+  font-size: 104%;
 }
 
 #content .scrollable {
@@ -233,15 +227,20 @@ li {
   overflow-y: auto;
   /* 85px = height di content-top-bar */
   padding: 85px 15px 30px;
+  background: #222;
 }
 
 .content-menu {
-  background: #222;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
+.content-menu > * {
+  flex-basis: 25%
+}
+
 .content-menu .button {
-  padding: 12px 15px;
+  padding: 8px 10px;
 }
 
 .content-menu .button.active::after {
@@ -255,20 +254,12 @@ li {
   background: green;
 }
 
-.content-category {
-}
-
 .songs-container {
   flex-wrap: wrap;
-
-}
-
-.songs-container {
-
 }
 
 .song-box {
-  flex-basis: calc(100% / 6);
+ flex-basis: calc(100% / 2);
 }
 
 .song-box img {
@@ -347,4 +338,76 @@ li {
 
 .right-player .status-bar::after {
   width: 45%;
+}
+
+
+/* RESPONSIVE */
+@media screen and (min-width: 601px) {
+  /* UTILITIES */
+  .display-small {
+    display: none;
+  }
+
+  .no-display-small {
+    display: initial;
+  }
+
+  /* MAIN */
+  .main-nav .button {
+    align-items: center;
+    padding: 10px 0;
+    width: 100%;
+    text-align: left;
+  }
+
+  .main-nav .button img {
+    padding-right: 10px;
+    width: 20%;
+    object-fit: contain;
+  }
+
+  .main-nav .button.active::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -15px;
+    width: 4px;
+    height: 100%;
+    background: green;
+  }
+
+  #sidebar {
+    flex-basis: 160px;
+    padding: 15px 15px 0 15px;
+  }
+
+  .sidebar-bottom button {
+    justify-content: flex-start;
+  }
+
+  .sidebar-bottom button i {
+    margin-right: 10px;
+  }
+
+  .sidebar-bottom .account-button .circle {
+    margin-right: 10px;
+  }
+
+  .content-menu > * {
+    flex-basis: auto;
+  }
+
+  .content-menu .button {
+    padding: 12px 15px;
+  }
+
+  .song-box {
+   flex-basis: calc(100% / 4);
+ }
+}
+
+@media screen and (min-width: 1024px) {
+  .song-box {
+   flex-basis: calc(100% / 6);
+ }
 }
