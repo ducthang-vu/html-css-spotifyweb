@@ -39,8 +39,8 @@ li {
   align-items: center;
 }
 
-.no-display-small {
- display: none;
+.black {
+  background: #000;
 }
 
 .flex {
@@ -59,6 +59,10 @@ li {
 
 .inline-block {
   display: inline-block;
+}
+
+.no-display-small {
+ display: none;
 }
 
 .relative {
@@ -123,7 +127,6 @@ li {
   flex-direction: column;
   justify-content: space-between;
   padding: 4px 6px 0 6px;
-  background: #000;
 }
 
 .main-nav {
@@ -192,7 +195,6 @@ li {
 /* CONTENT */
 #content {
   flex-grow: 1;
-  background: #000;
 }
 
 .content-top-bar {
@@ -304,7 +306,6 @@ li {
 
 .song-box .box-img img {
   width: 100%;
-  /* object-fit: fill; */
 }
 
 .song-box:nth-child(odd) {
