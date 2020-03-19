@@ -141,7 +141,6 @@ li {
 
 .main-nav .button img {
   width: 100%;
-  object-fit: contain;
 }
 
 
@@ -419,7 +418,6 @@ font-size: 200%;
   .main-nav .button img {
     padding-right: 10px;
     width: 20%;
-    object-fit: contain;
   }
 
   .main-nav .button.active::before {
