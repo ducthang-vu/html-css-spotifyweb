@@ -89,6 +89,10 @@ li {
   color: #fff;
 }
 
+.w-100 {
+  width: 100%;
+}
+
 /* LAYOUT */
 #app {
   flex-direction: column;
@@ -107,7 +111,7 @@ li {
   flex-basis: 50px; /* width sidebar, see responsive */
   flex-direction: column;
   justify-content: space-between;
-  padding: 4px 8px 0 8px;
+  padding: 4px 6px 0 6px;
   background: #000;
 }
 
@@ -156,10 +160,6 @@ li {
 
 .sidebar-bottom button:hover {
   color: #fff;
-}
-
-.sidebar-bottom .install-button {
-  border-bottom: 1px solid #fff;
 }
 
 .sidebar-bottom .account-button:hover .circle {
@@ -243,7 +243,7 @@ li {
 }
 
 .content-menu .button {
-  padding: 8px 10px;
+  padding: 4px;
 }
 
 .content-menu .button.active::after {
@@ -278,12 +278,12 @@ li {
 /* BOTTOM PLAYER */
 #player {
   justify-content: space-between;
-  padding: 15px;
+  padding: 6px;
   background: #333;
 }
 
 #player .left-player {
-  flex-basis: 25%;
+  flex-basis: 30%;
 }
 
 #player button:hover {
@@ -294,8 +294,8 @@ li {
   align-items: center;
 }
 
-.left-player * {
-  margin-right: 10px;
+.left-player > *:not(:last-child) {
+  margin-right: 5px;
 }
 
 .left-player img {
@@ -309,19 +309,20 @@ li {
 
 .icons-box {
   flex-direction: column;
+  align-items: center;
 }
 
 
 #player .central-player {
-  flex-basis: 50%;
+  flex-basis: 40%;
 }
 
 .central-player .central-top-player .button {
-  margin: 0 10px 5px;
+  margin: 0 5px 2px;
 }
 
 .central-player .status-bar {
-  margin: 0 10px;
+  margin: 0 5px;
   width: 100px;
 }
 
@@ -330,7 +331,7 @@ li {
 }
 
 #player .right-player {
-  flex-basis: 25%;
+  flex-basis: 30%;
 }
 
 .right-player {
@@ -339,11 +340,11 @@ li {
 }
 
 .right-player > * {
-  margin-left: 10px;
+  margin-left: 5px;
 }
 
 .right-player .status-bar {
-  width: 60px;
+  width: 50px;
 }
 
 .right-player .status-bar::after {
@@ -364,6 +365,11 @@ li {
   }
 
   /* MAIN */
+  #sidebar {
+    flex-basis: 160px;
+    padding: 15px 15px 0 15px;
+  }
+
   .main-nav .button {
     align-items: center;
     padding: 10px 0;
@@ -387,11 +393,6 @@ li {
     background: green;
   }
 
-  #sidebar {
-    flex-basis: 160px;
-    padding: 15px 15px 0 15px;
-  }
-
   .sidebar-bottom button {
     justify-content: flex-start;
   }
@@ -400,34 +401,83 @@ li {
     margin-right: 10px;
   }
 
+  .sidebar-bottom .install-button {
+    border-bottom: 1px solid #fff;
+  }
+
   .sidebar-bottom .account-button .circle {
     padding-right: 10px;
   }
 
-  .content-menu > * {
-    flex-basis: auto;
-  }
-
-  .content-menu .button {
-    padding: 12px 15px;
-  }
-
+  /* CONTENT */
   .song-box {
-   flex-basis: calc((100% / 4) - 10px);
+    flex-basis: calc((100% / 4) - 10px);
+  }
+
+  .song-box:not(:nth-child(4n)) {
+    margin-right: 10px;
  }
 
- .song-box:not(:nth-child(4n)) {
+ /* BOTTOM PLAYER */
+ #player {
+   padding: 15px;
+ }
+
+ .left-player > *:not(:last-child) {
    margin-right: 10px;
  }
+
+ .left-player .icons-box * {
+   margin: 0 3px;
+  }
 
  .icons-box {
    flex-direction: row;
  }
 
+ .central-player .central-top-player .button {
+   margin: 0 10px 5px;
+ }
+
  .central-player .status-bar {
    margin: 0 10px;
-   width: 250px;
+   width: 200px;
  }
+
+ .right-player > * {
+   margin-left: 10px;
+ }
+
+ .right-player .status-bar {
+   width: 60px;
+ }
+}
+
+
+@media screen and (min-width: 768px) {
+  .content-menu > * {
+    flex-basis: auto;
+  }
+
+  .content-menu .button {
+    padding: 6px 8px;
+  }
+
+
+  .central-player .status-bar {
+    width: 250px;
+  }
+}
+
+
+@media screen and (min-width: 992px) {
+  .content-menu .button {
+    padding: 12px 15px;
+  }
+
+  .central-player .status-bar {
+    width: 300px;
+  }
 }
 
 
@@ -445,7 +495,6 @@ li {
  }
 
  .central-player .status-bar {
-   margin: 0 10px;
-   width: 450px;
+   width: 400px;
  }
 }
