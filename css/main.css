@@ -104,10 +104,10 @@ li {
 
 /* SIDEBAR */
 #sidebar {
-  flex-basis: 60px; /* width sidebar, see responsive */
+  flex-basis: 50px; /* width sidebar, see responsive */
   flex-direction: column;
   justify-content: space-between;
-  padding: 5px 10px 0 10px;
+  padding: 4px 8px 0 8px;
   background: #000;
 }
 
@@ -116,7 +116,6 @@ li {
   flex-grow: 1;
 }
 
-/* /* WARNING:  */ */
 .main-nav .button {
   align-items: center;
   padding: 10px 0;
@@ -263,7 +262,7 @@ li {
 }
 
 .song-box {
- flex-basis: calc(100% / 2);
+ flex-basis: calc((100% / 2) - 10px);
 }
 
 .song-box img {
@@ -271,7 +270,9 @@ li {
   object-fit: contain;
 }
 
-
+.song-box:nth-child(odd) {
+  margin-right: 10px; /* see responsive */
+}
 
 
 /* BOTTOM PLAYER */
@@ -306,6 +307,11 @@ li {
   font-weight: 700;
 }
 
+.icons-box {
+  flex-direction: column;
+}
+
+
 #player .central-player {
   flex-basis: 50%;
 }
@@ -316,7 +322,7 @@ li {
 
 .central-player .status-bar {
   margin: 0 10px;
-  width: 450px;
+  width: 100px;
 }
 
 .central-player .status-bar::after {
@@ -395,7 +401,7 @@ li {
   }
 
   .sidebar-bottom .account-button .circle {
-    margin-right: 10px;
+    padding-right: 10px;
   }
 
   .content-menu > * {
@@ -407,13 +413,39 @@ li {
   }
 
   .song-box {
-   flex-basis: calc(100% / 4);
+   flex-basis: calc((100% / 4) - 10px);
+ }
+
+ .song-box:not(:nth-child(4n)) {
+   margin-right: 10px;
+ }
+
+ .icons-box {
+   flex-direction: row;
+ }
+
+ .central-player .status-bar {
+   margin: 0 10px;
+   width: 250px;
  }
 }
 
 
 @media screen and (min-width: 1024px) {
   .song-box {
-   flex-basis: calc(100% / 6);
+   flex-basis: calc((100% / 6) - 10px);
+ }
+
+ .song-box:not(:nth-child(6n)) {
+   margin-right: 10px;
+ }
+
+ .icons-box {
+   flex-direction: row;
+ }
+
+ .central-player .status-bar {
+   margin: 0 10px;
+   width: 450px;
  }
 }
