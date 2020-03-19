@@ -22,13 +22,12 @@ button:focus {
   outline: 0;
 }
 
-h2 {
-  padding: 25px 0 15px;
+h2,
+h4,
+p {
+  padding: 5px 0;
 }
 
-p {
-  padding: 5px 0 10px;
-}
 li {
   margin: 0;
   padding: 0;
@@ -167,12 +166,9 @@ li {
   font-size: 110%;
 }
 
-.sidebar-bottom .account-button:hover .circle {
-  background: green;
-}
-
 .sidebar-bottom .account-button:hover span {
-  text-decoration: underline;
+  padding: 4px 0;
+  border-bottom: 1px solid #fff;
 }
 
 .sidebar-bottom .account-button .circle {
@@ -261,6 +257,10 @@ li {
   width: 45px;
   height: 3px;
   background: green;
+}
+
+.content-category .section-header {
+  padding: 25px 0 20px;
 }
 
 .songs-container {
