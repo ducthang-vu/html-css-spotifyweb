@@ -265,10 +265,34 @@ li {
  flex-basis: calc((100% / 2) - 10px);
 }
 
-.song-box img {
+.song-box .box-img .hover-effect {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.song-box .box-img .far.fa-play-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 500%;
+  color: rgba(0, 0, 0, 0);
+}
+
+.song-box .box-img .hover-effect:hover {
+  background-color: rgba(0, 204, 153, 0.8);
+}
+.song-box .box-img .hover-effect:hover .far.fa-play-circle {
+  color: #fff;
+}
+
+/* .song-box .box-img img {
   width: 100%;
   object-fit: contain;
-}
+} */
 
 .song-box:nth-child(odd) {
   margin-right: 10px; /* see responsive */
