@@ -465,11 +465,12 @@ font-size: 200%;
    margin-right: 10px;
  }
 
- .left-player .icons-box * {
-   margin: 0 3px;
+ .left-player .icons-box *:first-child {
+   margin-right: 6px;
   }
 
  .icons-box {
+   margin: 0 5px;
    flex-direction: row;
  }
 
@@ -502,9 +503,8 @@ font-size: 200%;
     letter-spacing: 0;
   }
 
-
   .central-player .status-bar {
-    width: 250px;
+    width: 230px;
   }
 }
 
@@ -529,11 +529,7 @@ font-size: 200%;
    margin-right: 10px;
  }
 
- .icons-box {
-   flex-direction: row;
- }
-
  .central-player .status-bar {
-   width: 400px;
+   width: 330px;
  }
 }
