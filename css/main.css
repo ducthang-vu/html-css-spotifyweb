@@ -171,6 +171,10 @@ li {
   font-size: 110%;
 }
 
+.sidebar-bottom .account-button span {
+  font-weight: 800;
+}
+
 .sidebar-bottom .account-button:hover span {
   padding: 4px 0;
   border-bottom: 1px solid #fff;
