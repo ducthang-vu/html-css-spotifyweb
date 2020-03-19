@@ -304,7 +304,7 @@ li {
 
 .song-box .box-img img {
   width: 100%;
-  object-fit: fill;
+  /* object-fit: fill; */
 }
 
 .song-box:nth-child(odd) {
@@ -453,7 +453,7 @@ font-size: 200%;
   }
 
   .song-box {
-    flex-basis: calc((100% / 4) - 10px);
+    flex-basis: calc(100% / 4 - 30px / 4);
   }
 
   .song-box:not(:nth-child(4n)) {
@@ -526,14 +526,18 @@ font-size: 200%;
 
 @media screen and (min-width: 1024px) {
   .song-box {
-   flex-basis: calc((100% / 6) - 10px);
- }
+   flex-basis: calc(100% / 6 - 50px / 6);
+  }
 
- .song-box:not(:nth-child(6n)) {
-   margin-right: 10px;
- }
+  .song-box:not(:nth-child(6n)) {
+    margin-right: 10px;
+  }
 
- .central-player .status-bar {
-   width: 330px;
+  .song-box:nth-child(6n) {
+    margin-right: 0;
+  }
+
+  .central-player .status-bar {
+    width: 330px;
  }
 }
