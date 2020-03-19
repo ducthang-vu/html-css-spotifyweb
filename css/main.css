@@ -483,6 +483,15 @@ li {
    margin: 0 10px 5px;
  }
 
+ .central-top-player.flex {
+   justify-content: center;
+   align-items: center;
+ }
+
+ .central-player .central-top-player .far.fa-play-circle{
+  font-size: 200%;
+ }
+
  .central-player .status-bar {
    margin: 0 10px;
    width: 200px;
