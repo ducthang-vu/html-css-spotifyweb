@@ -367,7 +367,7 @@ font-size: 200%;
 }
 
 .central-player .status-bar::after {
-  width: 45%;
+  width: 40%;
 }
 
 #player .right-player {
@@ -387,7 +387,7 @@ font-size: 200%;
 }
 
 .right-player .status-bar::after {
-  width: 45%;
+  width: 60%;
 }
 
 
