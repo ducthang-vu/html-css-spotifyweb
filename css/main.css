@@ -17,6 +17,7 @@ button:focus {
   background-color: inherit;
   color: inherit;
   border-color: transparent;
+  font-family: inherit;
   font-size: inherit;
   outline: 0;
 }
@@ -162,6 +163,10 @@ li {
   color: #fff;
 }
 
+.sidebar-bottom .far.fa-arrow-alt-circle-down {
+  font-size: 110%;
+}
+
 .sidebar-bottom .account-button:hover .circle {
   background: green;
 }
@@ -244,6 +249,7 @@ li {
 
 .content-menu .button {
   padding: 10px 4px;
+  letter-spacing: -0.5px;
 }
 
 .content-menu .button.active::after {
@@ -283,16 +289,16 @@ li {
 }
 
 .song-box .box-img .hover-effect:hover {
-  background-color: rgba(0, 204, 153, 0.8);
+  background-color: rgba(50, 50, 50, 0.8);
 }
 .song-box .box-img .hover-effect:hover .far.fa-play-circle {
   color: #fff;
 }
 
-/* .song-box .box-img img {
+.song-box .box-img img {
   width: 100%;
-  object-fit: contain;
-} */
+  object-fit: fill;
+}
 
 .song-box:nth-child(odd) {
   margin-right: 10px; /* see responsive */
@@ -434,6 +440,10 @@ li {
   }
 
   /* CONTENT */
+  .content-menu .button {
+    padding: 15px 4px;
+  }
+
   .song-box {
     flex-basis: calc((100% / 4) - 10px);
   }
@@ -484,7 +494,8 @@ li {
   }
 
   .content-menu .button {
-    padding: 15px 8px;
+    padding: 20px 8px;
+    letter-spacing: 0;
   }
 
 
@@ -496,7 +507,7 @@ li {
 
 @media screen and (min-width: 992px) {
   .content-menu .button {
-    padding: 15px;
+    padding: 20px 15px;
   }
 
   .central-player .status-bar {
