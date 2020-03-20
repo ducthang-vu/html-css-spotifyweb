@@ -47,6 +47,11 @@ li {
   display: flex;
 }
 
+.hover-bg-gray-sm:hover {
+  background: rgba(50, 50, 50, 1);
+  border-radius: 12px;
+}
+
 .hover-gray:hover,
 .hover-gray:hover i {
   color: gray;
@@ -404,6 +409,10 @@ font-size: 200%;
   /* UTILITIES */
   .display-small {
     display: none;
+  }
+
+  .hover-bg-gray-sm:hover {
+    background: inherit;
   }
 
   .no-display-small {
