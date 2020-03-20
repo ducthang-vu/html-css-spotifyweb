@@ -360,15 +360,15 @@ li {
   flex-basis: 40%;
 }
 
-.central-player .central-top-player .button {
+.central-player .central-menu-player .button {
   margin: 0 5px 2px;
 }
 
-.central-top-player.flex {
+.central-menu-player.flex {
   justify-content: center;
 }
 
-.central-player .central-top-player .far.fa-play-circle{
+.central-player .central-menu-player .far.fa-play-circle{
 font-size: 200%;
 }
 
@@ -493,7 +493,7 @@ font-size: 200%;
    flex-direction: row;
  }
 
- .central-player .central-top-player .button {
+ .central-player .central-menu-player .button {
    margin: 0 10px 5px;
  }
 
