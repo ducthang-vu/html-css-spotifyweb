@@ -299,6 +299,7 @@ li {
 .song-box .box-img .hover-effect:hover {
   background-color: rgba(50, 50, 50, 0.6);
 }
+
 .song-box .box-img .hover-effect:hover .far.fa-play-circle {
   color: #fff;
 }
