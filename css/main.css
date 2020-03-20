@@ -413,6 +413,7 @@ font-size: 200%;
 
   .hover-bg-gray-sm:hover {
     background: inherit;
+    border-radius: 0;
   }
 
   .no-display-small {
