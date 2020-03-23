@@ -80,7 +80,7 @@ li {
   border-radius: 3px;
 }
 
-.status-bar::after {
+.status-bar:hover::after {
   position: absolute;
   content: '';
   left: 0;
@@ -90,7 +90,7 @@ li {
   border-radius: 3px;
 }
 
-.status-bar:hover::after {
+.status-bar:hover::before {
   position: absolute;
   content: '';
   left: 0;
@@ -98,6 +98,18 @@ li {
   transform: translate(-2px, -50%);
   border: 2px solid green;
   border-radius: 3px;
+}
+
+.status-bar:hover::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  width: 5px;
+  height: 5px;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  border: 2px solid #fff;
+  border-radius: 50%;
 }
 
 .text-center {
@@ -377,8 +389,12 @@ font-size: 200%;
   width: 100px;
 }
 
-.central-player .status-bar::after {
+.central-player .status-bar::before {
   width: 40%;
+}
+
+.central-player .status-bar:hover::after {
+  left: 40%;
 }
 
 #player .right-player {
@@ -397,10 +413,13 @@ font-size: 200%;
   width: 50px;
 }
 
-.right-player .status-bar::after {
+.right-player .status-bar::before {
   width: 60%;
 }
 
+.right-player .status-bar:hover::after {
+  left: 60%;
+}
 
 
 /* RESPONSIVE */
